@@ -112,9 +112,12 @@ const randomNumber = () => {
 // creating a function to set parameters for password
 function generatePassword() {
   // how many characters 8-128
-  var setLimit = parseFloat(
+  setLimit = parseFloat(
     prompt("How many characters between 8-128 would you like to use?")
   );
+  if (!setLimit) {
+    alert = "A number must be selected!";
+  }
   var confirmSpecial = confirm("Would you like to use a special character?");
 
   var confirmNumeric = confirm("Would you like to use a number?");
@@ -144,14 +147,13 @@ function generatePassword() {
     parameters = parameters.concat(uppercase);
   }
 
-  var randomPassword = "";
+  var newPassword = "";
 
-  for (var i = 0; i < enterLimit; i++) {
-    randomPassword =
-      randomPassword +
-      parameters[Math.floor(Math.random() * parameters.length)];
+  for (var i = 0; i < setLimit; i++) {
+    newPassword =
+      newPassword + parameters[Math.floor(Math.random() * parameters.length)];
   }
-  return randomPassword;
+  return newPassword;
 }
 
 // Write password to the #password input
