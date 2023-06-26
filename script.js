@@ -124,6 +124,34 @@ function generatePassword() {
   var confirmUppercase = confirm(
     "Would you like to use an uppercase character?"
   );
+
+  var parameters = [];
+
+  // If Special is chosen.
+  if (confirmSpecial) {
+    parameters = parameters.concat(special);
+  }
+  // If Numeric is chosen.
+  if (confirmNumeric) {
+    parameters = parameters.concat(numeric);
+  }
+  // If Lowercase is chosen.
+  if (confirmLowercase) {
+    parameters = parameters.concat(lowercase);
+  }
+  // If Uppercase is chosen.
+  if (confirmUppercase) {
+    parameters = parameters.concat(uppercase);
+  }
+
+  var randomPassword = "";
+
+  for (var i = 0; i < enterLimit; i++) {
+    randomPassword =
+      randomPassword +
+      parameters[Math.floor(Math.random() * parameters.length)];
+  }
+  return randomPassword;
 }
 
 // Write password to the #password input
