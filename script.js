@@ -136,8 +136,6 @@ function generatePassword() {
 
   var newPassword = "";
 
-  console.log("logging params", parameters);
-
   for (var i = 0; i < setLimit; i++) {
     newPassword =
       newPassword + parameters[Math.floor(Math.random() * parameters.length)];
@@ -149,7 +147,6 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  console.log("password: ", password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
