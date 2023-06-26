@@ -115,15 +115,14 @@ function generatePassword() {
   var setLimit = parseFloat(
     prompt("How many characters between 8-128 would you like to use?")
   );
-  var confirmSpecial = parseFloat(
-    prompt("Would you like to use a special character?")
+  var confirmSpecial = confirm("Would you like to use a special character?");
+
+  var confirmNumeric = confirm("Would you like to use a number?");
+  var confirmLowercase = confirm(
+    "Would you like to use a lowercase character?"
   );
-  var confirmNumeric = parseFloat(prompt("Would you like to use a number?"));
-  var confirmLowercase = parseFloat(
-    prompt("Would you like to use a lowercase character?")
-  );
-  var confirmUppercase = parseFloat(
-    prompt("Would you like to use an uppercase character?")
+  var confirmUppercase = confirm(
+    "Would you like to use an uppercase character?"
   );
 }
 
