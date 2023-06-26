@@ -163,7 +163,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-  if (randomPassword === "") {
+  if (newPassword === "") {
   }
 }
 
