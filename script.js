@@ -37,7 +37,6 @@ const randomLowercase = () => {
     "y",
     "z",
   ];
-  //   return lowercase[Math.floor(Math.random() * lowercase.length)];
 };
 
 const randomUppercase = () => {
@@ -69,7 +68,6 @@ const randomUppercase = () => {
     "Y",
     "Z",
   ];
-  //   return uppercase[Math.floor(Math.random() * uppercase.length)];
 };
 
 const randomSpecial = () => {
@@ -105,12 +103,10 @@ const randomSpecial = () => {
     "}",
     "~",
   ];
-  //   return symbol[Math.floor(Math.random() * symbol.length)];
 };
 
 const randomNumber = () => {
   numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  //   return num[Math.floor(Math.random() * num.length)];
 };
 
 // creating a function to set parameters for password
@@ -119,22 +115,7 @@ function generatePassword() {
   var setLimit = parseFloat(
     prompt("How many characters between 8-128 would you like to use?")
   );
-  // If they press the cancel button
-  if (!setLimit) {
-    alert("This needs a value!");
-    var setLimit = parseFloat(
-      prompt("How many characters would you like your password to contain?")
-    );
-  }
-
-  // If they choose outside the limit.
-  if (setLimit < 8 || setLimit > 128) {
-    var enterLimit = parseFloat(prompt("You must choose between 8 and 128."));
-  }
-  // If they choose inside the limit.
-  if (setLimit < 8 || setLimit > 128) {
-    var setLimit;
-  }
+  console.log(setLimit);
 }
 
 // Write password to the #password input
