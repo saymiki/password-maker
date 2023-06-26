@@ -119,10 +119,35 @@ function generatePassword() {
   var setLimit = parseFloat(
     prompt("How many characters between 8-128 would you like to use?")
   );
-  // numbers y/n
-  // uppercase y/n
-  // lowercase y/n
-  // special characters y/n
+  // If they press the cancel button
+  if (!setLimit) {
+    alert("This needs a value!");
+    var setLimit = parseFloat(
+      prompt("How many characters would you like your password to contain?")
+    );
+  }
+
+  // If they choose outside the limit.
+  if (setLimit < 8 || setLimit > 128) {
+    var enterLimit = parseFloat(prompt("You must choose between 8 and 128."));
+  }
+  // If they choose inside the limit.
+  if (setLimit < 8 || setLimit > 128) {
+    var setLimit;
+  } else {
+    var confirmSpecial = confirm(
+      "Press OK to confirm including special characters."
+    );
+    var confirmNumeric = confirm(
+      "Press OK to confirm including numeric characters."
+    );
+    var confirmLowercase = confirm(
+      "Press OK to confirm including lowercase characters."
+    );
+    var confirmUppercase = confirm(
+      "Press OK to confirm including uppercase characters."
+    );
+  }
 }
 
 // Write password to the #password input
