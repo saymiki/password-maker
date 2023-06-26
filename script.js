@@ -134,19 +134,6 @@ function generatePassword() {
   // If they choose inside the limit.
   if (setLimit < 8 || setLimit > 128) {
     var setLimit;
-  } else {
-    var confirmSpecial = confirm(
-      "Press OK to confirm including special characters."
-    );
-    var confirmNumeric = confirm(
-      "Press OK to confirm including numeric characters."
-    );
-    var confirmLowercase = confirm(
-      "Press OK to confirm including lowercase characters."
-    );
-    var confirmUppercase = confirm(
-      "Press OK to confirm including uppercase characters."
-    );
   }
 }
 
