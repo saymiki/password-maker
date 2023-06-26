@@ -1,74 +1,64 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var setLimit = "";
-var confirmLowercase;
-var confirmUppercase;
-var confirmSpecial;
-var confirmNumeric;
-
 // creating characters to choose to create password from
-const randomLowercase = () => {
-  lowercase = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-  ];
-};
+const lowercase = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
 
-const randomUppercase = () => {
-  uppercase = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z",
-  ];
-};
+const uppercase = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
 const special = [
   "!",
@@ -103,9 +93,7 @@ const special = [
   "~",
 ];
 
-const randomNumber = () => {
-  numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-};
+const numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // creating a function to set parameters for password
 function generatePassword() {
@@ -130,6 +118,7 @@ function generatePassword() {
 
   // If Special is chosen.
   if (confirmSpecial) {
+    console.log("log special: ", special);
     parameters = parameters.concat(special);
   }
   // If Numeric is chosen.
@@ -151,6 +140,7 @@ function generatePassword() {
     newPassword =
       newPassword + parameters[Math.floor(Math.random() * parameters.length)];
   }
+
   return newPassword;
 }
 
