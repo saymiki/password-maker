@@ -70,40 +70,38 @@ const randomUppercase = () => {
   ];
 };
 
-const randomSpecial = () => {
-  special = [
-    "!",
-    "#",
-    "$",
-    "%",
-    "&",
-    "'",
-    "(",
-    ")",
-    "*",
-    "+",
-    ",",
-    "-",
-    ".",
-    "/",
-    ":",
-    ";",
-    "<",
-    "=",
-    ">",
-    "?",
-    "@",
-    "[",
-    "]",
-    "^",
-    "_",
-    "`",
-    "{",
-    "|",
-    "}",
-    "~",
-  ];
-};
+const special = [
+  "!",
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+  "[",
+  "]",
+  "^",
+  "_",
+  "`",
+  "{",
+  "|",
+  "}",
+  "~",
+];
 
 const randomNumber = () => {
   numeric = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -162,9 +160,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
-  if (newPassword === "") {
-  }
 }
 
 // Add event listener to generate button
