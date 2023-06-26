@@ -111,13 +111,13 @@ const randomNumber = () => {
 
 // creating a function to set parameters for password
 function generatePassword() {
-  // how many characters 8-128
-  setLimit = parseFloat(
-    prompt("How many characters between 8-128 would you like to use?")
-  );
-  if (!setLimit) {
-    alert = "A number must be selected!";
-  }
+  var setLimit;
+  do {
+    setLimit = parseInt(
+      prompt("How many characters between 8-128 would you like to use?")
+    );
+  } while (isNaN(setLimit) || setLimit < 8 || setLimit > 128);
+
   var confirmSpecial = confirm("Would you like to use a special character?");
 
   var confirmNumeric = confirm("Would you like to use a number?");
