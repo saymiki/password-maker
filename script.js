@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var enterLimit = "";
+var setLimit = "";
 var confirmLowercase;
 var confirmUppercase;
 var confirmSpecial;
